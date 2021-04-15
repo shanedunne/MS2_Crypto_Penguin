@@ -54,6 +54,14 @@ body {
     text-transform: underline;
 }
 
+.custom-toggler.navbar-toggler {
+    border-color: #f59c27;
+  } 
+
+  .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(245,156,39, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
 /*----------------------------------------- modal*/
 
 #myModal {
@@ -93,11 +101,20 @@ body {
 
 .modal-content {
     background-color: #212529;
+    padding-bottom: 20px;
+
 }
 
 .modal-catagory {
     padding-left: 170px;
     font-size: 26px;
+}
+
+@media (max-width: 767.98px) { 
+    .modal-catagory {
+        padding-left: 36px;
+        font-size: 18px;
+    }
 }
 
 #modal-price , #modal-volume , #modal-market-cap {
@@ -108,15 +125,35 @@ body {
 #modal-price {
     padding-left: 80px;
 }
+@media (max-width: 767.98px) { 
+    #modal-price {
+        padding-left: 20px;
+        font-size: 18px;
+    }
+}
 
 #modal-volume {
     padding-left: 80px;
 
 }
 
+@media (max-width: 767.98px) { 
+    #modal-volume {
+        padding-left: 21px;
+        font-size: 18px;
+    }
+}
+
 #modal-market-cap {
     padding-left: 96px;
 
+}
+
+@media (max-width: 767.98px) { 
+    #modal-market-cap {
+        padding-left: 33px;
+        font-size: 18px;
+    }
 }
 
 /*----------------------------------------- Table*/
@@ -140,18 +177,36 @@ tr {
     font-family: 'Roboto', sans-serif;
 }
 
+@media (max-width: 767.98px) { 
+    .rank-head {
+        padding-left: 13px;
+    }
+}
+
 .name-head {
     padding-right: 15px;
     text-align: left;
     padding-left: 30px;
 }
 
-
+@media (max-width: 767.98px) { 
+    .name-head {
+        padding-right: 2px;
+        padding-left: 5px;
+    }
 }
+
 
 .symbol-head {
     padding-right: 35px;
     padding-left: 35px;
+}
+
+@media (max-width: 767.98px) { 
+    .symbol-head {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
 .price-head {
@@ -174,6 +229,21 @@ tr {
     padding-left: 75px;
     
 }
+/*----- Tablet Size - Table -----*/
+@media (max-width: 991.98px) { 
+    .volume-head , .coin-volume {
+        display: none;
+    }
+    .market-cap-head , .coin-market-cap {
+        display: none;
+    }
+ }
+
+ @media (max-width: 767.98px) { 
+     .percent-head , .coin-percent {
+         display: none;
+     }
+ }
 
 th {
     color: #f59c27;
@@ -206,6 +276,13 @@ tr {
     text-align: left;
     padding-left: 30px;
 }
+
+@media (max-width: 767.98px) { 
+    .coin-name {
+        padding-left: 2px;
+    }
+}
+
 
 
 /* --------- Form --------*/

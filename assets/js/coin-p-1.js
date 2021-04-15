@@ -1,3 +1,5 @@
+
+// CoinGecko API for coin data
 let page = 1;
 let perPage = 100;
 
@@ -66,9 +68,9 @@ async function getData(){
               <td class='coin-name'>${coins.name}</td>
               <td class='symbol'>${coins.symbol}</td>
               <td>${formatter.format(coins.current_price)}</td>
-              <td>${coins.price_change_percentage_24h.toFixed(2)+ '%'}</td>
-              <td>${formatter.format(coins.total_volume)}</td>
-              <td>${formatter.format(coins.market_cap)}</td>
+              <td class='coin-percent'>${coins.price_change_percentage_24h.toFixed(2)+ '%'}</td>
+              <td class='coin-volume'>${formatter.format(coins.total_volume)}</td>
+              <td class='coin-market-cap'>${formatter.format(coins.market_cap)}</td>
             </tr>`;
             coinData += rowHTML}
             
@@ -102,7 +104,14 @@ async function getData(){
     for (i = 0; i < coinNameModal.length; i++) {
         coinNameModal[i].addEventListener('click', getData);
     }
-    
+
+    /*percent color
+    function getData() {
+        if ($(".percent-color").val() > 0) {
+            $(this).css('color', 'green');
+        }
+    }
+    */
 };
 
 getData();
