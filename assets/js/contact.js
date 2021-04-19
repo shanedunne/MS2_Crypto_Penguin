@@ -12,3 +12,32 @@ function initMap() {
     });
   }
 
+
+  // Send email function
+
+  function sendMail(contactForm) {
+    emailjs.send("service_tdedqih","crypto_penguin", {
+        "from_name": contactForm.name.value,
+        "from_email": contactForm.email.value,
+        "message": contactForm.enquiry.value
+    })
+    .then(
+        function(response) {
+            console.log("SUCCESS", response);
+        },
+        function(error) {
+            console.log("ERROR SENDING", error)
+        }
+    )
+    return false;
+  }
+
+// show submit message
+
+/*$(document).ready(function() {
+    $("#myForm").submit(function(e) {
+        $("#form-div").hide();
+        $("#submit-message").show();
+    });
+});
+*/

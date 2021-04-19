@@ -5,7 +5,7 @@ let perPage = 100;
 
 function nextPage() {
     page++;
-    getData();
+    Location.reload();
 };
 
 const coinURL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${page}&sparkline=true&price_change_percentage=24h`;
@@ -33,11 +33,7 @@ async function getData(){
       });
     
     
-       /* if(coinPercentChange > 0){
-            coinPercentChange.style.color = '#e15241';
-        } else {
-            coinPercentChange.style.color = '#8dc647';
-        }; */
+    
 
 
     

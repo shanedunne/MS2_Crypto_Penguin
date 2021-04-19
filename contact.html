@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/contact.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+   (function(){
+      emailjs.init("user_GtXUcOMZ2cVAkEf83bRde");
+      })();
+</script>
     <title>Crypto Penguin</title>
 </head>
 <body>
@@ -40,22 +48,25 @@
           </div>
           <div class="col">
             <h2 class="contact-header">Send us your CV!</h2>
-            <p class="contact-blurb">We are always looking to expand out team! Fill out the form below and attach your CV and we will get back to you</p>
+            <p class="contact-blurb">We are always looking to expand out team! Fill out the form below, attach your CV and we will get back to you</p>
             <div class="form-div justify-content-center">
-                <form>
-                    <input type="text" id="formname" placeholder="Full Name" required>
+                <form id='myForm' onsubmit="return sendMail(this);">
+                    <input type="text" name='name' id="formname" placeholder="Full Name" required>
                     <br>
-                    <input type="email" id="emailaddress" placeholder="Email Address" required>
+                    <input type="email" name='email' id="emailaddress" placeholder="Email Address" required>
                     <br>
-                    <input type="tel" id="form-tel" placeholder="Phone Number" required>
+                    <input type="tel" name='phone' id="form-tel" placeholder="Phone Number" required>
                     <br>
-                    <textarea placeholder="Tell us a little about you..."></textarea>
+                    <textarea name='enquiry' placeholder="Tell us a little about you..."></textarea>
                     <br>
                     <label for="form-div" id="attach-label">Attach CV!</label>
                     <input type="file" id="form-cv">
                     <br>
                     <button type="submit" class="form-button" id="form-button">Submit!</button>
                 </form>
+            </div>
+            <div id="submit-message" style="display: none;">
+                <p>Thank you for your enquiry. Someone will be back to you shortly!</p>
             </div>
           </div>
         </div>
