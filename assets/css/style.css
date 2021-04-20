@@ -198,7 +198,7 @@ th {
 }
 
 table {
-    background-color: #22262a;
+    background-color: #212529;
 }
 
 tr {
@@ -387,7 +387,7 @@ textarea {
     color: #f59c27;
 }
 
-.form:focus{
+form:focus{
     outline: none;
     box-shadow: 0px 0px 2px #f59c27
 }

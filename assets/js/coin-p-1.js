@@ -1,16 +1,29 @@
-
 // CoinGecko API for coin data
 let page = 1;
 let perPage = 100;
 
 function nextPage() {
     page++;
-    Location.reload();
+    getData();
 };
 
-const coinURL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${page}&sparkline=true&price_change_percentage=24h`;
+function prevPage() {
+    page--;
+    function hidePrev(){
+        var prev = document.getElementById('prevPageSelector')
+        if(page === 1){
+          prev.style.display('none');
+        };
+    };
+    hidePrev();
+    getData();
+};
+
+
+// change from a const
 
 async function getData(){
+    const coinURL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${page}&sparkline=true&price_change_percentage=24h`;
     const response = await fetch(coinURL);
     const data = await response.json();
     console.log(data);
@@ -37,7 +50,6 @@ async function getData(){
 
 
     
-    // Write your code here
     function buildTable() {
         let coinData = `
         <table id='myTable'>
@@ -65,8 +77,8 @@ async function getData(){
               <td class='symbol'>${coins.symbol}</td>
               <td>${formatter.format(coins.current_price)}</td>
               <td class='coin-percent'>${coins.price_change_percentage_24h.toFixed(2)+ '%'}</td>
-              <td class='coin-volume'>${formatter.format(coins.total_volume)}</td>
-              <td class='coin-market-cap'>${formatter.format(coins.market_cap)}</td>
+              <td class='coin-volume'>${formatter.format(coins.total_volume).replace('.00', "")}</td>
+              <td class='coin-market-cap'>${formatter.format(coins.market_cap).replace('.00', "")}</td>
             </tr>`;
             coinData += rowHTML}
             
@@ -84,7 +96,7 @@ async function getData(){
     document.getElementById('coins-table').innerHTML = table; 
 
 
-    function getData() {
+    function showModal() {
         document.getElementById("modal-title").innerHTML = $(this).html();
         document.getElementById("modal-symbol").innerHTML = $(this).next().html();
         document.getElementById("modal-price").innerHTML = $(this).next().next().html();
@@ -95,26 +107,31 @@ async function getData(){
 
         $("#myModal").modal('show')
     }
-    
-    let coinNameModal = document.getElementsByClassName('coin-name');
-    for (i = 0; i < coinNameModal.length; i++) {
-        coinNameModal[i].addEventListener('click', getData);
-    }
-
-    /*percent color
-    function getData() {
-        if ($(".percent-color").val() > 0) {
-            $(this).css('color', 'green');
+    function changePercentColor(value, element) {
+        if (value >= 0) {
+            element.style.color = '#00CC00';
+        }else {
+            if(value < 0) {
+                element.style.color = '#FF8F8F'
+            }
         }
     }
-    */
+    
+    let percentColor = document.getElementsByClassName('coin-percent');
+    let coinNameModal = document.getElementsByClassName('coin-name');
+    for (i = 0; i < coinNameModal.length; i++) {
+        coinNameModal[i].addEventListener('click', showModal);
+        changePercentColor(data[i].price_change_percentage_24h, percentColor[i])
+        
+    }
+
+
 };
 
 getData();
 
 // Search function - https://www.w3schools.com/howto/howto_js_filter_table.asp 
 function searchFunction() {
-    // Declare variables
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("search-bar");
     filter = input.value.toUpperCase();

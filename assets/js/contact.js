@@ -24,6 +24,8 @@ function initMap() {
     .then(
         function(response) {
             console.log("SUCCESS", response);
+            // style alert
+            alert('Your message was sent successfully')
         },
         function(error) {
             console.log("ERROR SENDING", error)
@@ -32,12 +34,3 @@ function initMap() {
     return false;
   }
 
-// show submit message
-
-/*$(document).ready(function() {
-    $("#myForm").submit(function(e) {
-        $("#form-div").hide();
-        $("#submit-message").show();
-    });
-});
-*/
