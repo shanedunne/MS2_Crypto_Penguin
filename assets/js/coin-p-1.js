@@ -1,3 +1,26 @@
+// Global Cryptocurrency Data
+
+async function getGlobalData(){
+    const response = await fetch('https://api.coingecko.com/api/v3/global');
+    const globalData = await response.json();
+
+    var ethDominance = globalData.data.market_cap_percentage.eth
+    var btcDominance = globalData.data.market_cap_percentage.btc
+    console.log(ethDominance);
+
+    document.getElementById('btcDominance').innerText = btcDominance.toFixed(2);
+    document.getElementById('ethDominance').innerText = ethDominance.toFixed(2);
+
+
+    /*for (let i = 0; i < globalData.length; i++) { 
+        let globalMarketCap = globalData[i].active_cryptocurrencies;
+    };
+    document.getElementById('total_market_cap').innerHTML = globalData.active_cryptocurrencies;
+    console.log(globalMarketCap); */
+
+};
+getGlobalData();
+
 // CoinGecko API for coin data
 let page = 1;
 let perPage = 100;
@@ -20,13 +43,12 @@ function prevPage() {
 };
 
 
-// change from a const
 
 async function getData(){
     const coinURL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${page}&sparkline=true&price_change_percentage=24h`;
     const response = await fetch(coinURL);
     const data = await response.json();
-    console.log(data);
+
 
     for (let i = 0; i < data.length; i++) { 
         let coinRank = data[i].market_cap_rank;
@@ -90,7 +112,6 @@ async function getData(){
         
         return coinData;
     }
-    console.log(buildTable());
     
     let table = buildTable();
     document.getElementById('coins-table').innerHTML = table; 
