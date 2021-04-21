@@ -21,7 +21,7 @@ body {
     padding-bottom: 100px;
     padding-left: 30px;
     color: #f59c27;
-
+    cursor: pointer;
 }
 
 
@@ -307,6 +307,11 @@ tr {
     padding-left: 30px;
 }
 
+.coin-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 @media (max-width: 767.98px) { 
     .coin-name {
         padding-left: 2px;
@@ -332,7 +337,7 @@ tr {
     color: #fafafa;
     font-size: 22px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-left: 65px;
     padding-right: 65px;
     font-family: 'Roboto', sans-serif;
@@ -406,7 +411,7 @@ footer {
 
 
 #map {
-    height: 600px;
-    width: 80%;
+    height: 450px;
+    width: 70%;
     margin: auto;
   }
