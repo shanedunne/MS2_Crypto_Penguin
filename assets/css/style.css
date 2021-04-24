@@ -158,6 +158,10 @@ body {
 
 /*----------------------------------------- Table*/
 
+.search-col {
+    padding-top: 80px;
+}
+
 #search-bar {
     position: absolute; 
     bottom: 0;
@@ -195,15 +199,29 @@ body {
 /* ------ global data -------- */
 .global {
     color: #fafafa;
+    padding-left: 20px;
+}
+
+.global-col {
+    border-top: 1px solid #8a8a8a;
+    border-bottom: 1px solid #8a8a8a;
+    color: #fafafa;
     padding-bottom: 3px;
     padding-left: 20px;
+
+
+}
+
+.no-gutters {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 @media (max-width: 767.98px) {
     .global {
         display: none;
     }
-    .search_global_col {
+    .search-col {
         padding-top: 50px;
         padding-left: 8px;
     }

@@ -30,16 +30,9 @@
       </nav>
 
       <!--Search Bar and Global Data-->
-      <div class="container-fluid search_global_col">
-        <div class="row">
-          <div class="col">
-        <input type="text" id="search-bar" onkeyup="searchFunction()" placeholder="Search...">
-          </div>
-      </div>
-      </div>
       <div class="container-fluid">
         <div class="row">
-          <div class="col">
+          <div class="col no-gutters">
             <div class="global-col">
               <p class="global">Total Market Cap: <span id="totalMarketCap"></span></p>
               <p class="global">Total 24h Volume: <span id="totalVolume"></span></p>
@@ -50,6 +43,14 @@
           </div>
         </div>
       </div>
+      <div class="container-fluid search-col">
+        <div class="row">
+          <div class="col">
+        <input type="text" id="search-bar" onkeyup="searchFunction()" placeholder="Search...">
+          </div>
+      </div>
+      </div>
+      
       <div class='container-fluid'>
         <div class="row justify-content-center">
           <div id="coins-table">

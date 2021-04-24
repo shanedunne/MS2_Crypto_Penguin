@@ -1,5 +1,11 @@
-// Global Cryptocurrency Data
+// Currency Formatter - https://stackoverflow.com/questions/149055/how-to-format-numbers-as-currency-string
+const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
 
+
+// Global Cryptocurrency Data
 async function getGlobalData(){
     const response = await fetch('https://api.coingecko.com/api/v3/global');
     const globalData = await response.json();
@@ -19,11 +25,6 @@ async function getGlobalData(){
     document.getElementById('btcDominance').innerText = btcDominance.toFixed(2);
     document.getElementById('ethDominance').innerText = ethDominance.toFixed(2);
 
-
-    var formatter = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
-      });
 
 };
 getGlobalData();
@@ -67,16 +68,6 @@ async function getData(){
         let coinVolume = data[i].total_volume;
         let coinMarketCap = data[i].market_cap;
     };
-
-
-    var formatter = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
-      });
-    
-    
-    
-
 
     
     function buildTable() {
