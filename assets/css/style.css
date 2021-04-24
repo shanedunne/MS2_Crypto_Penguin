@@ -70,11 +70,11 @@ body {
 
 #modal-image {
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 110px;
-  width: 110px;
-  padding-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 110px;
+    width: 110px;
+    padding-top: 12px;
 }
 
 #modal-title {
@@ -183,7 +183,7 @@ body {
         margin-left: 2px;
         width: 130px;
         height: 30px;
-        padding-top: 45px;
+    
     }
 }
 
@@ -194,15 +194,28 @@ body {
 
 /* ------ global data -------- */
 .global {
-    color: #f59c27;
+    color: #fafafa;
     padding-bottom: 3px;
-    padding-left: 280px;
+    padding-left: 20px;
 }
 
 @media (max-width: 767.98px) {
     .global {
         display: none;
     }
+    .search_global_col {
+        padding-top: 50px;
+        padding-left: 8px;
+    }
+}
+
+.global-col p {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.global-col {
+    padding-left: 263px;
 }
 
 p {
@@ -418,9 +431,14 @@ textarea {
     color: #f59c27;
 }
 
-form:focus{
+form input:focus{
     outline: none;
-    box-shadow: 0px 0px 2px #f59c27
+    box-shadow: 0px 0px 4px #f59c27
+}
+
+form textarea:focus{
+    outline: none;
+    box-shadow: 0px 0px 4px #f59c27
 }
 
 label {

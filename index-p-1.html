@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="index-p-1.html">
-            <img src="assets/images//40cd1917f78c4990bde746918e6a4ebc (2) (1).png" alt="Crypto Penguin logo" loading="lazy">
+            <img src="assets/images/40cd1917f78c4990bde746918e6a4ebc (2) (1).png" alt="Crypto Penguin logo" loading="lazy">
         </a>
         <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -30,16 +30,25 @@
       </nav>
 
       <!--Search Bar and Global Data-->
-      <div class="container-fluid">
+      <div class="container-fluid search_global_col">
         <div class="row">
           <div class="col">
         <input type="text" id="search-bar" onkeyup="searchFunction()" placeholder="Search...">
           </div>
-        <div class="col">
-            <p class="global">BTC Dominance: <span id="btcDominance"></span>%</p>
-            <p class="global">ETH Dominance: <span id="ethDominance"></span>%</p>
-        </div>
       </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="global-col">
+              <p class="global">Total Market Cap: <span id="totalMarketCap"></span></p>
+              <p class="global">Total 24h Volume: <span id="totalVolume"></span></p>
+              <p class="global">Active Tokens: <span id="totalCoins"></span></p>
+              <p class="global">BTC Dominance: <span id="btcDominance"></span>%</p>
+              <p class="global">ETH Dominance: <span id="ethDominance"></span>%</p>
+          </div>
+          </div>
+        </div>
       </div>
       <div class='container-fluid'>
         <div class="row justify-content-center">

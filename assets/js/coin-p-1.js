@@ -4,19 +4,26 @@ async function getGlobalData(){
     const response = await fetch('https://api.coingecko.com/api/v3/global');
     const globalData = await response.json();
 
+
+    var totalMarketCap = globalData.data.total_market_cap.usd
+    var totalVolume = globalData.data.total_volume.usd;
+    var totalCoins = globalData.data.active_cryptocurrencies;
     var ethDominance = globalData.data.market_cap_percentage.eth
     var btcDominance = globalData.data.market_cap_percentage.btc
-    console.log(ethDominance);
+    
+    console.log(globalData);
 
+    document.getElementById('totalMarketCap').innerText = totalMarketCap.toFixed(0);
+    document.getElementById('totalVolume').innerText = totalVolume.toFixed(0);
+    document.getElementById('totalCoins').innerText = totalCoins;
     document.getElementById('btcDominance').innerText = btcDominance.toFixed(2);
     document.getElementById('ethDominance').innerText = ethDominance.toFixed(2);
 
 
-    /*for (let i = 0; i < globalData.length; i++) { 
-        let globalMarketCap = globalData[i].active_cryptocurrencies;
-    };
-    document.getElementById('total_market_cap').innerHTML = globalData.active_cryptocurrencies;
-    console.log(globalMarketCap); */
+    var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      });
 
 };
 getGlobalData();

@@ -24,8 +24,8 @@ function initMap() {
     .then(
         function(response) {
             console.log("SUCCESS", response);
-            // style alert
-            alert('Your message was sent successfully')
+            alert('Thank you for getting in touch. Someone will get back to you soon');
+            $('#myForm')[0].reset();
         },
         function(error) {
             console.log("ERROR SENDING", error)
