@@ -16,6 +16,8 @@ async function getGlobalData(){
     var totalCoins = globalData.data.active_cryptocurrencies;
     var ethDominance = globalData.data.market_cap_percentage.eth
     var btcDominance = globalData.data.market_cap_percentage.btc
+
+    //var test = formatter.format(totalMarketCap);
     
     console.log(globalData);
 

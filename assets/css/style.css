@@ -106,7 +106,7 @@ body {
 }
 
 .modal-catagory {
-    padding-left: 170px;
+    padding-left: 190px;
     font-size: 26px;
 }
 
@@ -156,7 +156,7 @@ body {
     }
 }
 
-/*----------------------------------------- Table*/
+/*---------- Search--------*/
 
 .search-col {
     padding-top: 80px;
@@ -212,6 +212,12 @@ body {
 
 }
 
+@media (max-width: 991.98px) {
+    .global-col {
+        display: none;
+    }
+}
+
 .no-gutters {
     padding-right: 0;
     padding-left: 0;
@@ -252,6 +258,15 @@ table, th, td {
 th {
     border-top: 1px solid #8a8a8a;
     font-size: 20px;
+}
+
+@media (max-width: 575.98px) { 
+    th {
+        font-size: 16px;
+    }
+    td {
+        font-size: 13px;
+    }
 }
 
 table {

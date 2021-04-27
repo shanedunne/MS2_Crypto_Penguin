@@ -17,16 +17,12 @@
 - Next to stop at page 25
 - further style these buttons
 ### cursor
-make cursor change to hand whenever over clickable item
 
 ## Contact Page
 ### Map
 - add some interaction on map as suggested by Excellence 
 
 ### form
-- change :active color 
-- make sure hover over submit works
-- code alert to show form submitted and clear form
 
 
 ## responsiveness 
