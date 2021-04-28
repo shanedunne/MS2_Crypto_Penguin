@@ -20,7 +20,6 @@
 
 ## Contact Page
 ### Map
-- add some interaction on map as suggested by Excellence 
 
 ### form
 

@@ -18,11 +18,12 @@ async function getGlobalData(){
     var btcDominance = globalData.data.market_cap_percentage.btc
 
     //var test = formatter.format(totalMarketCap);
+    //document.getElementById('totalMarketCap').innerText = test.toFixed(0);
     
     console.log(globalData);
 
-    document.getElementById('totalMarketCap').innerText = totalMarketCap.toFixed(0);
-    document.getElementById('totalVolume').innerText = totalVolume.toFixed(0);
+    document.getElementById('totalMarketCap').innerText = formatter.format(totalMarketCap);
+    document.getElementById('totalVolume').innerText = formatter.format(totalVolume);
     document.getElementById('totalCoins').innerText = totalCoins;
     document.getElementById('btcDominance').innerText = btcDominance.toFixed(2);
     document.getElementById('ethDominance').innerText = ethDominance.toFixed(2);
@@ -70,6 +71,7 @@ async function getData(){
         let coinVolume = data[i].total_volume;
         let coinMarketCap = data[i].market_cap;
     };
+    console.log(data);
 
     
     function buildTable() {
