@@ -1,6 +1,14 @@
 # MS2_Crypto_Penguin
 ## User Experience
-
+## User Stories
+### User 1
+Paul is a crypto newbie and has recently purchased Bitcoin. He needs a site where he can easily check the current price of Bitcoin.
+### User 2
+Ciara is a cryptocurrency trader. She needs a resource where she can check the main crypto metrics for the assets she has invested in. As Ciara is not a novice, she relies on market cap and volume more than price.
+### User 3
+Michael has been investing in stocks for quite some time and has now had his attention drawn to the crypto space. He is particularly interested in global metrics, sizing the scale of the industry by market cap, volume and number of assets.
+### User 4
+Sarah is an alt coin trader. Since alt coins enjoy a rally when Bitcoin dominance falls and Ethereum dominance rises, she needs a resourse where she can check the current dominance levels, while also being able to check stats on the top coins, which may not all be on her exchange of choice
 
 ## 1. Strategy
 Customer Goals:

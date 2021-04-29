@@ -1,12 +1,10 @@
 # List of items to finish
 
 ## Main Page
-### logo
-- need to create SVG logo or get background to work
+
 ### search bar
 - need to get search bar working across multiple pages
-### global data
-- pull in some glabal information from coingecko including global market cap etc
+
 ### table
 - make obvious that coin name can be clicked
 - ensure that table is loaded first

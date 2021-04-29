@@ -79,12 +79,12 @@ async function getData(){
         <table id='myTable'>
           <thead>
             <tr>
-              <th class='rank-head'>Rank</th>
+              <th class='rank-head' onClick="sortTableByRank()">Rank</th>
               <th class='image-head'></th>
               <th class='name-head'>Name</th>
               <th class='symbol-head'>Symbol</th>
               <th class='price-head'>Price</th>
-              <th class='percent-head'>24h Change</th>
+              <th class='percent-head' onclick="sortTableByPercent()">24h Change</th>
               <th class='volume-head'>24h Volume</th>
               <th class='market-cap-head'>Market Cap</th>
             </tr>
@@ -173,3 +173,52 @@ function searchFunction() {
       }
     }
   }
+
+// Sort by 24h percent change
+function sortTableByPercent(n) {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("myTable");
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("td")[5];
+      y = rows[i + 1].getElementsByTagName("td")[5];
+      if (parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+
+// Sort by rank
+function sortTableByRank(n) {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("myTable");
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("td")[0];
+      y = rows[i + 1].getElementsByTagName("td")[0];
+      if (Number(x.innerHTML) > Number(y.innerHTML)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+
