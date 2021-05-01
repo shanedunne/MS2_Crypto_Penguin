@@ -238,9 +238,6 @@ body {
     vertical-align: top;
 }
 
-.global-col {
-
-}
 
 p {
     margin-bottom: 0px;
@@ -284,6 +281,7 @@ tr {
         padding-left: 13px;
     }
 }
+
 
 .name-head {
     padding-right: 15px;

@@ -25,3 +25,8 @@
 ## responsiveness 
 - media queries on contact page
 -check all items on main page
+
+## errors
+- on page 10 coin-p-1.js:103 Uncaught (in promise) TypeError: Cannot read property 'toFixed' of null
+    at buildTable (coin-p-1.js:103)
+    at getData (coin-p-1.js:118)

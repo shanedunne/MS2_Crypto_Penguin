@@ -34,7 +34,6 @@ getGlobalData();
 
 // CoinGecko API for coin data
 let page = 1;
-let perPage = 100;
 
 function nextPage() {
     page++;
@@ -44,11 +43,12 @@ function nextPage() {
 function prevPage() {
     page--;
     function hidePrev(){
-        var prev = document.getElementById('prevPageSelector')
-        if(page === 1){
-          prev.style.display('none');
-        };
-    };
+        if(page == 1){
+          $("#prevPageSelector").hide();
+        }else {
+          $("#prevPageSelector").show();
+        }
+    }
     hidePrev();
     getData();
 };

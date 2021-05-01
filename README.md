@@ -11,20 +11,20 @@ Michael has been investing in stocks for quite some time and has now had his att
 Sarah is an alt coin trader. Since alt coins enjoy a rally when Bitcoin dominance falls and Ethereum dominance rises, she needs a resourse where she can check the current dominance levels, while also being able to check stats on the top coins, which may not all be on her exchange of choice
 
 ## 1. Strategy
-Customer Goals:
+Customer Goals: To be able to provide acurate and detaied statistics on the top 1000 cryptocurrencies in the world.
 
-Personal Goals:
+Personal Goals: To create a project about something i have a passion in, learn to integrate APIs and improve my javascript knowledge with my first JS project
 
 ## 2. Scope
-
+I aimed to keep the data provided to the user simple but sufficient in giving a clear image of the top 1000 cryptocurrencies. I have included some global metrics on the industry as a whole along with the main data points required to understand the performace of any of the top 1000 crypto assets
 
 ## 3. Structure
-
+The site contains a simple navigation bar between the home page and the contact us page. Following this, the first set of data displayed is the global metrics. This data is intentionally displayed at the top of the home page as it is good to get an understanding of the global market cap, volume and dominance ratings before diving into individual assets. Following this, all data is formatted identically in a table. i have set up a modal to open upon clicking of any asset name. This modal wass designed particularly for smaller screen sizes, saw all data is accessable even when the table cannot display it all.
 
 ## 4. Skeleton
-
+*** insert and discuss wireframes ***
 ## 5. Surface 
-
+I wanted to keep the design simple but ellegant. I did not want any styling to take away from the content displayed on the page, only to enhance it. I went for a dark background (#212529) with a simple font (Roberto) and the majority of the font in (#fafafa) to allow the data to pop. i wanted to make the cryptocurrency symbol stand out so i went for a color and font combination of (#f59c27 & Zen Dots). Zen Dots looks somewhat futuristic. This combined with the chosen shade of orange adds decoration down the middle of the page
 # Features
 ## Deployed Features
 
