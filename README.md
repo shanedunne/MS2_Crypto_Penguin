@@ -27,28 +27,37 @@ The site contains a simple navigation bar between the home page and the contact 
 I wanted to keep the design simple but ellegant. I did not want any styling to take away from the content displayed on the page, only to enhance it. I went for a dark background (#212529) with a simple font (Roberto) and the majority of the font in (#fafafa) to allow the data to pop. i wanted to make the cryptocurrency symbol stand out so i went for a color and font combination of (#f59c27 & Zen Dots). Zen Dots looks somewhat futuristic. This combined with the chosen shade of orange adds decoration down the middle of the page
 # Features
 ## Deployed Features
+- Collapsable Bootstrap navbar
+- Global cryptocurrency metric bar
+- Search page function
+- Table containing most relevant information on top 1000 Cryptocurrencies
+- Bootstrap Modal containing coin data when name clicked
+- Integrated Google Maps API showing Crypto Penguin location
+- Contact form using EmailJS
 
-
-## Features being worked on
 
 # Technologies used
 ## Languages
 - [HTML5](https://en.wikipedia.org/wiki/HTML5) - Basis of the content added through HTML5
 - [CSS3](https://en.wikipedia.org/wiki/CSS) - Used to style content
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Website interactivity
+- [Coin Gecko API](https://www.coingecko.com/en/api) - API used to obtain data
+- [Google Maps API](https://developers.google.com/maps/documentation/javascript/overview) - Location integration
+- [EmailJS](https://www.emailjs.com/docs/) - Contact form integration
 
 ## Workspace
-I used [Github](https://github.com/) to host my repository and [Gitpod](https://gitpod.io/workspaces/) to write my Code
+I used [Github](https://github.com/) to host my repository and [Visual Studio Code](https://code.visualstudio.com/) to write my Code
 
 ## Integration/Frameworks
 - [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) - used for carousels, navbar etc
-- [Font Awesome](https://fontawesome.com/start) - used to incorporate icon
+- [jQuery](https://api.jquery.com/) - JavaScript library 
 
 # Resources 
 ## Information Resources
-- [Canva](https://www.canva.com/) - Sizing images
 - [Stack Overflow](https://stackoverflow.com/) - Educational resource
 - [Youtube](https://www.youtube.com/) - Tutorial resource
 - [Balsamiq](https://balsamiq.com/wireframes/) - Used to generate Wireframes
+- [W3Schools](https://www.w3schools.com/js/default.asp) - Used to check up on methods etc.
 
 ## Code Resources
 

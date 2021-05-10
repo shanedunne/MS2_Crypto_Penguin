@@ -17,8 +17,7 @@ async function getGlobalData(){
     var ethDominance = globalData.data.market_cap_percentage.eth
     var btcDominance = globalData.data.market_cap_percentage.btc
 
-    //var test = formatter.format(totalMarketCap);
-    //document.getElementById('totalMarketCap').innerText = test.toFixed(0);
+
     
     console.log(globalData);
 
@@ -84,7 +83,7 @@ async function getData(){
               <th class='name-head'>Name</th>
               <th class='symbol-head'>Symbol</th>
               <th class='price-head'>Price</th>
-              <th class='percent-head' onclick="sortTableByPercent()">24h Change</th>
+              <th class='percent-head' onclick="sortTableByPercentAscending(); sortTableByPercentDescending();">24h Change</th>
               <th class='volume-head'>24h Volume</th>
               <th class='market-cap-head'>Market Cap</th>
             </tr>
@@ -175,7 +174,7 @@ function searchFunction() {
   }
 
 // Sort by 24h percent change
-function sortTableByPercent(n) {
+function sortTableByPercentDescending(n) {
   var table, rows, switching, i, x, y, shouldSwitch;
   table = document.getElementById("myTable");
   switching = true;
@@ -197,6 +196,31 @@ function sortTableByPercent(n) {
     }
   }
 }
+
+/*function sortTableByPercentAscending(n) {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("myTable");
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("td")[5];
+      y = rows[i + 1].getElementsByTagName("td")[5];
+      if (parseInt(x.innerHTML) > parseInt(y.innerHTML)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+*/
+
 
 // Sort by rank
 function sortTableByRank(n) {

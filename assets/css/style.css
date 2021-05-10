@@ -12,7 +12,7 @@ body {
 
 
 .page-selector {
-    padding-right: 300px;
+    padding-right: 260px;
 }
 
 .page-selector p {
@@ -112,10 +112,18 @@ body {
 
 @media (max-width: 767.98px) { 
     .modal-catagory {
-        padding-left: 36px;
+        padding-left: 16px;
         font-size: 18px;
     }
 }
+
+@media (max-width: 991.98px) { 
+    .modal-catagory {
+        padding-left: 46px;
+        font-size: 22px;
+    }
+}
+
 
 #modal-price , #modal-volume , #modal-market-cap {
     color: #fafafa;
