@@ -166,6 +166,10 @@ body {
 
 /*---------- Search--------*/
 
+.search-and-table {
+    position: relative;
+}
+
 .search-col {
     padding-top: 80px;
 }
@@ -175,8 +179,8 @@ body {
     bottom: 0;
     width: 230px;
     height: 40px;
-    margin-left: 225px;
-    margin-right: 0px;
+    /*margin-left: 225px;
+    margin-right: 0px; */
     margin-bottom: 6px;
     background-color: #212529;
     border: 1px solid #8a8a8a;
@@ -227,9 +231,15 @@ body {
 }
 
 .no-gutters {
-    padding-right: 0;
-    padding-left: 0;
-}
+    margin-right: 0;
+    margin-left: 0;
+  
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 
 @media (max-width: 767.98px) {
     .global {
@@ -276,6 +286,7 @@ th {
 
 table {
     background-color: #212529;
+    position: relative;
 }
 
 tr {
@@ -491,6 +502,14 @@ footer {
     padding-top: 250px;
 
 }
+
+/*@media (max-width: 991.98px) { 
+    #map {
+        height: 450px;
+        width: 90%;
+        margin: auto;
+    }
+}*/
 
 
 #map {

@@ -83,7 +83,7 @@ async function getData(){
               <th class='name-head'>Name</th>
               <th class='symbol-head'>Symbol</th>
               <th class='price-head'>Price</th>
-              <th class='percent-head' onclick="sortTableByPercentAscending(); sortTableByPercentDescending();">24h Change</th>
+              <th class='percent-head' onclick="sortTableByPercent()">24h Change</th>
               <th class='volume-head'>24h Volume</th>
               <th class='market-cap-head'>Market Cap</th>
             </tr>
@@ -174,10 +174,11 @@ function searchFunction() {
   }
 
 // Sort by 24h percent change
-function sortTableByPercentDescending(n) {
-  var table, rows, switching, i, x, y, shouldSwitch;
+function sortTableByPercent(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchingcount = 0;
   table = document.getElementById("myTable");
   switching = true;
+  dir = 'desc';
   while (switching) {
     switching = false;
     rows = table.rows;
@@ -185,17 +186,31 @@ function sortTableByPercentDescending(n) {
       shouldSwitch = false;
       x = rows[i].getElementsByTagName("td")[5];
       y = rows[i + 1].getElementsByTagName("td")[5];
-      if (parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
-        shouldSwitch = true;
-        break;
+      if (dir == 'desc') {
+        if (parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == 'asc') {
+        if (parseInt(x.innerHTML) > parseInt(y.innerHTML)) {
+          shouldSwitch = true;
+          break;
+        }
       }
     }
     if (shouldSwitch) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
+      switchingcount++;
+    }else {
+      if (switchingcount == 0 && dir == 'desc') {
+        dir = 'asc';
+        switching = true;
+      }
     }
   }
 }
+
 
 /*function sortTableByPercentAscending(n) {
   var table, rows, switching, i, x, y, shouldSwitch;
