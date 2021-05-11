@@ -84,7 +84,7 @@ async function getData(){
               <th class='symbol-head'>Symbol</th>
               <th class='price-head'>Price</th>
               <th class='percent-head' onclick="sortTableByPercent()">24h Change</th>
-              <th class='volume-head'>24h Volume</th>
+              <th class='volume-head' onclick="sortTableByVolume()">24h Volume</th>
               <th class='market-cap-head'>Market Cap</th>
             </tr>
           </thead>
@@ -173,6 +173,45 @@ function searchFunction() {
     }
   }
 
+// Sort by rank
+function sortTableByRank(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchingcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  dir = 'desc';
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("td")[0];
+      y = rows[i + 1].getElementsByTagName("td")[0];
+      if (dir == 'desc') {
+        if (Number(x.innerHTML) > Number(y.innerHTML)) {
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == 'asc') {
+        if (Number(x.innerHTML) < Number(y.innerHTML)) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchingcount++;
+    }else {
+      if (switchingcount == 0 && dir == 'desc') {
+        dir = 'asc';
+        switching = true;
+      }
+    }
+  }
+}
+
+
 // Sort by 24h percent change
 function sortTableByPercent(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchingcount = 0;
@@ -212,9 +251,8 @@ function sortTableByPercent(n) {
 }
 
 
-
-// Sort by rank
-function sortTableByRank(n) {
+/* Sort by 24h volume
+function sortTableByVolume(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchingcount = 0;
   table = document.getElementById("myTable");
   switching = true;
@@ -224,15 +262,15 @@ function sortTableByRank(n) {
     rows = table.rows;
     for (i = 1; i < (rows.length - 1); i++) {
       shouldSwitch = false;
-      x = rows[i].getElementsByTagName("td")[0];
-      y = rows[i + 1].getElementsByTagName("td")[0];
+      x = rows[i].getElementsByTagName("td")[6];
+      y = rows[i + 1].getElementsByTagName("td")[6];
       if (dir == 'desc') {
-        if (parseInt(x.innerHTML) > parseInt(y.innerHTML)) {
+        if (Number(x.innerHTML) < Number(y.innerHTML)) {
           shouldSwitch = true;
           break;
         }
       } else if (dir == 'asc') {
-        if (parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
+        if (Number(x.innerHTML) > Number(y.innerHTML)) {
           shouldSwitch = true;
           break;
         }
@@ -250,5 +288,6 @@ function sortTableByRank(n) {
     }
   }
 }
+*/
 
 
