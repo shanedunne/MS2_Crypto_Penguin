@@ -291,6 +291,9 @@ tr {
     }
 }
 
+.rank-head {
+    cursor: pointer;
+}
 
 .name-head {
     padding-right: 15px;
@@ -326,6 +329,7 @@ tr {
 .percent-head {
     padding-right: 25px;
     padding-left: 25px;
+    cursor: pointer;
 }
 
 .volume-head {
