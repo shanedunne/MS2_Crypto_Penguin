@@ -62,6 +62,7 @@ I used [Github](https://github.com/) to host my repository and [Visual Studio Co
 ## Code Resources
 
 # Testing
+## Basic Testing
 - [WC3 HTML Validator](https://validator.w3.org/) - Used to test HTML code
 - [WC3 CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to test CSS code
 - Tested on multiple browsers (Chrome, Safari, Edge)

@@ -23,7 +23,6 @@
 
 
 ## responsiveness 
-- media queries on contact page - change to full width items at larger screen size
 -check all items on main page
 
 ## errors
