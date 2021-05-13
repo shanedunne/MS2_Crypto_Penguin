@@ -35,16 +35,18 @@ getGlobalData();
 let page = 1;
 
 function nextPage() {
-    if (page > 1) {
+    if (page >= 1) {
       page++;
       changePage(page);
+      getData();
     }
 };
 
 function prevPage() {
     if (page > 1) {
       page--;
-      changePage(page);
+      changePage(page)
+      getData();
     }
 };
 
@@ -52,7 +54,6 @@ function changePage(page) {
   var prevPageSelector = document.getElementById('prevPageSelector');
   var nextPageSelector = document.getElementById('nextPageSelector');
 
-  if (page < 1) page = 1;
 
   if (page == 1) {
     prevPageSelector.style.visibility = "hidden";
@@ -103,7 +104,6 @@ async function getData(){
         let coinVolume = data[i].total_volume;
         let coinMarketCap = data[i].market_cap;
     };
-    console.log(data);
 
     
     function buildTable() {

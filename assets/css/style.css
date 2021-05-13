@@ -20,6 +20,8 @@ body {
     padding-left: 30px;
     color: #f59c27;
     cursor: pointer;
+    font-family: 'Zen Dots', cursive;
+
 }
 
 #nextPageSelector {
@@ -30,6 +32,8 @@ body {
     padding-right: 20px;
     color: #f59c27;
     cursor: pointer;
+    font-family: 'Zen Dots', cursive;
+
 }
 
 @media (min-width: 992px) { 
@@ -497,9 +501,27 @@ label {
 
 
 footer {
-    padding-top: 250px;
-
+    padding-top: 100px;
 }
+
+footer a {
+    color: #f59c27;
+    font-family: 'Zen Dots', cursive;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    font-size: 12px;
+}
+
+footer a:hover {
+    color: #f59c27;
+}
+
+@media (max-width: 767.98px) { 
+    footer a {
+        font-size: 10px;
+        padding-bottom: 0px;
+    }
+ }
 
 
 
