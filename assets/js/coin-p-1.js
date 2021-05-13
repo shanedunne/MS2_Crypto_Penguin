@@ -35,6 +35,39 @@ getGlobalData();
 let page = 1;
 
 function nextPage() {
+    if (page > 1) {
+      page++;
+      changePage(page);
+    }
+};
+
+function prevPage() {
+    if (page > 1) {
+      page--;
+      changePage(page);
+    }
+};
+
+function changePage(page) {
+  var prevPageSelector = document.getElementById('prevPageSelector');
+  var nextPageSelector = document.getElementById('nextPageSelector');
+
+  if (page < 1) page = 1;
+
+  if (page == 1) {
+    prevPageSelector.style.visibility = "hidden";
+  } else {
+    prevPageSelector.style.visibility = "visible";
+  }
+
+  if (page >= 10) {
+    nextPageSelector.style.visibility = "hidden";
+  } else {
+    nextPageSelector.style.visibility = "visible";
+  }
+}
+
+/*function nextPage() {
     page++;
     getData();
 };
@@ -51,7 +84,7 @@ function prevPage() {
     hidePrev();
     getData();
 };
-
+*/
 
 
 async function getData(){
