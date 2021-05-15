@@ -1,4 +1,6 @@
-# MS2_Crypto_Penguin
+# Crypto Penguin
+![](/assets/images/multi-device-image)
+
 ## User Experience
 ## User Stories
 ### User 1
@@ -22,7 +24,7 @@ I aimed to keep the data provided to the user simple but sufficient in giving a 
 The site contains a simple navigation bar between the home page and the contact us page. Following this, the first set of data displayed is the global metrics. This data is intentionally displayed at the top of the home page as it is good to get an understanding of the global market cap, volume and dominance ratings before diving into individual assets. Following this, all data is formatted identically in a table. i have set up a modal to open upon clicking of any asset name. This modal wass designed particularly for smaller screen sizes, saw all data is accessable even when the table cannot display it all.
 
 ## 4. Skeleton
-*** insert and discuss wireframes ***
+[Wireframes](/assets/wireframes/wireframes.pdf)
 ## 5. Surface 
 I wanted to keep the design simple but ellegant. I did not want any styling to take away from the content displayed on the page, only to enhance it. I went for a dark background (#212529) with a simple font (Roberto) and the majority of the font in (#fafafa) to allow the data to pop. i wanted to make the cryptocurrency symbol stand out so i went for a color and font combination of (#f59c27 & Zen Dots). Zen Dots looks somewhat futuristic. This combined with the chosen shade of orange adds decoration down the middle of the page
 # Features
@@ -116,35 +118,29 @@ Prior to submission, I deployed the site to GitHub pages in order to be able to 
 
 ## Performace
 I used the Chrome Dev Tools Lighthouse feature to check the sites performance on both mobile and desktop versions. The site performed extremely well with results displayed below
-![Mobile Test](https://github.com/[shanedunne]/[MS2_CRYPTO_PENGUIN]/blob/[main]/assets/images/lighthouse-performance-test-mobile?raw=true)
+
+#### Mobile Test
+![Mobile Test](/assets/images/lighthouse-performance-test-mobile)
+
+#### Desktop Test
+![Desktop Test](/assets/images/lighthouse-performance-test-desktop)
+
+## Browsers and Devices
+- I tested the website on Google Chrome, Safari and Microsoft Edge and all features looked and worked as exprected
+- I tested the website on an iPhone 11, iPhone 8 and Galaxy 8 and all featues looked and worked as expected
 
 
-
-
-
-- Tested on multiple browsers (Chrome, Safari, Edge)
-- Tested on multiple devices (iPhone 11, 8, Galaxy S8)
-- Tested all nav items when collapsed and not
-- Tested logo returns to homepage
-- Tested all external links ensuring they open in a new tab
-- Tested the contact form to ensure the name, email and textarea were required
-- Tested carousel navigation arrows
 
 # Deployment
-1. All code was constructed in Gitpod and held in a Github repository
+1. All code was constructed in Visual Studio Code and held in a Github repository
 2. Ensured all testing and validations were complete
 3. Pushed the final version code to Github
 4. From the repository i selected the settings tab
-5. In the Github Pages section i selected Master Branch from the source dropdown and pressed save 
-6. The Github hosted URL appeared in within a few moments the page was live
+5. In the Github Pages section i selected Main Branch from the source dropdown and pressed save 
+6. The Github hosted URL appeared and within a few moments the page was live
 
-# Credits
-## Content
-- All images were supplied to DBS Bloodstock by Horse Racing Ireland
-
-## Code
 
 # Acknowledgments
-- Thanks to the Code Institute whos tuition has brought my skills to a level to be able to achieve this
-- Finally, thanks to my great mentor Excellence Ilesanmi for helping and guiding me along the way
+- Thanks to the Code Institute whos tuition has brought my skills to a level to be able to achieve this. The tutor support have been very helpful and patient
+- A big thanks to my great mentor Excellence Ilesanmi for helping and guiding me along the way
 
