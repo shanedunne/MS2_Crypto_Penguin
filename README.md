@@ -1,7 +1,7 @@
 # Crypto Penguin
 ![](/assets/images/multi-device-image)
 
-## User Experience
+
 ## User Stories
 ### User 1
 Paul is a crypto newbie and has recently purchased Bitcoin. He needs a site where he can easily check the current price of Bitcoin.
@@ -12,6 +12,7 @@ Michael has been investing in stocks for quite some time and has now had his att
 ### User 4
 Sarah is an alt coin trader. Since alt coins enjoy a rally when Bitcoin dominance falls and Ethereum dominance rises, she needs a resourse where she can check the current dominance levels, while also being able to check stats on the top coins, which may not all be on her exchange of choice
 
+## User Experience
 ## 1. Strategy
 Customer Goals: To be able to provide acurate and detaied statistics on the top 1000 cryptocurrencies in the world.
 
@@ -129,8 +130,17 @@ I used the Chrome Dev Tools Lighthouse feature to check the sites performance on
 - I tested the website on Google Chrome, Safari and Microsoft Edge and all features looked and worked as exprected
 - I tested the website on an iPhone 11, iPhone 8 and Galaxy 8 and all featues looked and worked as expected
 
+## Bugs Throughout Development
+- I ran into an issue what caused a concole log error some times i clicked the 'Next' button to navigate to the next page. Using Google Chrome Dev Tools Debugger, I was able to determine that the issue lay in the following line 
+```js 
+              <td class='coin-percent'>${coins.price_change_percentage_24h.toFixed(2) + '%'}</td>
 
+```
+- The toFixed function was returning null on the odd occurance that the data was 0. I fixed the issue by adding 'or 0' to the code as seen below
 
+```js
+              <td class='coin-percent'>${(coins.price_change_percentage_24h || 0).toFixed(2) + '%'}</td>
+```
 # Deployment
 1. All code was constructed in Visual Studio Code and held in a Github repository
 2. Ensured all testing and validations were complete
