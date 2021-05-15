@@ -537,6 +537,11 @@ footer a:hover {
     margin: auto;
   }
 
+  #mapMarkerHeading {
+    font-family: 'Zen Dots', cursive;
+    font-size: small;
+  }
+
   @media (max-width: 991.98px) { 
     footer {
         padding-top: 100px;
