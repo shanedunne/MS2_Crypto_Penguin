@@ -109,7 +109,15 @@ I used [Github](https://github.com/) to host my repository and [Visual Studio Co
 - Alert working successfully when submission fails 
 
 ## Responsiveness
-### 
+Responsiveness was checked using [Responsinator](https://www.responsinator.com/) while also designed with responsiveness in mind with regular testing on Dev Tools. The responsiveness has been tested across multiple devices such as iPhone 8, iPhone 8 Plus, iPhone X, Samusing Galaxy X5, iPad etc.
+
+## Usability 
+Prior to submission, I deployed the site to GitHub pages in order to be able to share a link to the site with some friends who are also passionate about Cryptocurrency. All of the feedback was very positive, each friend found it easy to use and useful in day to day life
+
+## Performace
+I used the Chrome Dev Tools Lighthouse feature to check the sites performance on both mobile and desktop versions. The site performed extremely well with results displayed below
+![Mobile Test](https://github.com/[shanedunne]/[MS2_CRYPTO_PENGUIN]/blob/[main]/assets/images/lighthouse-performance-test-mobile?raw=true)
+
 
 
 
