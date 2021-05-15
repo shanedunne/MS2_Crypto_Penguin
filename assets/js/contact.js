@@ -12,23 +12,23 @@ function initMap() {
   });
 
   const contentString =
-  '<div id="content">' +
-  '<div id="siteNotice">' +
-  "</div>" +
-  '<h1 id="mapMarkerHeading" class="firstHeading">Crypto Penguin in Galway</h1>' +
-  '<div id="bodyContent">' +
-  "<p><b>Crypto Penguin</b> is located in Galway City in the west of Ireland</p>" +
-  "</div>" +
-  "</div>";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="mapMarkerHeading" class="firstHeading">Crypto Penguin in Galway</h1>' +
+    '<div id="bodyContent">' +
+    "<p><b>Crypto Penguin</b> is located in Galway City in the west of Ireland</p>" +
+    "</div>" +
+    "</div>";
 
-const infowindow = new google.maps.InfoWindow({
-  content: contentString,
-});
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+  });
 
 
-marker.addListener("click", () => {
-  infowindow.open(map, marker);
-});
+  marker.addListener("click", () => {
+    infowindow.open(map, marker);
+  });
 }
 
 
