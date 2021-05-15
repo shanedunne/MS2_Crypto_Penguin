@@ -1,37 +1,4 @@
-// Currency Formatter - https://stackoverflow.com/questions/149055/how-to-format-numbers-as-currency-string
-const formatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-  });
-
-
-// Global Cryptocurrency Data
-async function getGlobalData(){
-    const response = await fetch('https://api.coingecko.com/api/v3/global');
-    const globalData = await response.json();
-
-
-    var totalMarketCap = globalData.data.total_market_cap.usd
-    var totalVolume = globalData.data.total_volume.usd;
-    var totalCoins = globalData.data.active_cryptocurrencies;
-    var ethDominance = globalData.data.market_cap_percentage.eth
-    var btcDominance = globalData.data.market_cap_percentage.btc
-
-
-    
-    console.log(globalData);
-
-    document.getElementById('totalMarketCap').innerText = formatter.format(totalMarketCap);
-    document.getElementById('totalVolume').innerText = formatter.format(totalVolume);
-    document.getElementById('totalCoins').innerText = totalCoins;
-    document.getElementById('btcDominance').innerText = btcDominance.toFixed(2);
-    document.getElementById('ethDominance').innerText = ethDominance.toFixed(2);
-
-
-};
-getGlobalData();
-
-// CoinGecko API for coin data
+// Page Selection
 let page = 1;
 
 function nextPage() {
@@ -68,25 +35,44 @@ function changePage(page) {
   }
 }
 
-/*function nextPage() {
-    page++;
-    getData();
-};
 
-function prevPage() {
-    page--;
-    function hidePrev(){
-        if(page == 1){
-          $("#prevPageSelector").hide();
-        }else {
-          $("#prevPageSelector").show();
-        }
-    }
-    hidePrev();
-    getData();
-};
-*/
+// Currency Formatter - https://stackoverflow.com/questions/149055/how-to-format-numbers-as-currency-string
+const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
 
+
+// Global Cryptocurrency Data
+async function getGlobalData(){
+    const response = await fetch('https://api.coingecko.com/api/v3/global');
+    const globalData = await response.json();
+
+
+    var totalMarketCap = globalData.data.total_market_cap.usd
+    var totalVolume = globalData.data.total_volume.usd;
+    var totalCoins = globalData.data.active_cryptocurrencies;
+    var ethDominance = globalData.data.market_cap_percentage.eth
+    var btcDominance = globalData.data.market_cap_percentage.btc
+
+
+    
+    console.log(globalData);
+
+    document.getElementById('totalMarketCap').innerText = formatter.format(totalMarketCap);
+    document.getElementById('totalVolume').innerText = formatter.format(totalVolume);
+    document.getElementById('totalCoins').innerText = totalCoins;
+    document.getElementById('btcDominance').innerText = btcDominance.toFixed(2);
+    document.getElementById('ethDominance').innerText = ethDominance.toFixed(2);
+
+
+};
+getGlobalData();
+
+
+
+
+//CoinGecko API for coin data
 
 async function getData(){
     const coinURL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${page}&sparkline=true&price_change_percentage=24h`;
@@ -128,11 +114,11 @@ async function getData(){
             let rowHTML = `
             <tr class="coins-table">
               <td>${coins.market_cap_rank}</td>
-              <td><img src='${coins.image}'></td>
+              <td><img src='${coins.image}' alt='token image'></td>
               <td class='coin-name'>${coins.name}</td>
               <td class='symbol'>${coins.symbol}</td>
               <td>${formatter.format(coins.current_price)}</td>
-              <td class='coin-percent'>${coins.price_change_percentage_24h.toFixed(2)+ '%'}</td>
+              <td class='coin-percent'>${coins.price_change_percentage_24h.toFixed(2) + '%'}</td>
               <td class='coin-volume'>${formatter.format(coins.total_volume).replace('.00', "")}</td>
               <td class='coin-market-cap'>${formatter.format(coins.market_cap).replace('.00', "")}</td>
             </tr>`;
@@ -162,6 +148,8 @@ async function getData(){
 
         $("#myModal").modal('show')
     }
+
+    // change colour of 24h % change column based on positive or negative number
     function changePercentColor(value, element) {
         if (value >= 0) {
             element.style.color = '#00CC00';

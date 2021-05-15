@@ -6,7 +6,6 @@
 - need to get search bar working across multiple pages
 
 ### table
-- make obvious that coin name can be clicked
 - ensure that table is loaded first
 ### Modal
 - get % change color working on modal
