@@ -183,8 +183,6 @@ body {
 }
 
 #search-bar {
-    position: absolute; 
-    bottom: 0;
     width: 230px;
     height: 40px;
     margin-left: 225px;
@@ -198,15 +196,21 @@ body {
     color: #8a8a8a;
 }
 
+@media (max-width: 1199.98px) { 
+    #search-bar {
+        margin-left: 3px;
+    }
+ }
+
 @media (max-width: 991.98px) {
     #search-bar {
-        margin-left: 38px;
+        margin-left: 23px;
     }
 }
 
 @media (max-width: 767.98px) {
     #search-bar {
-        margin-left: 2px;
+        margin-left: -20px;
         width: 130px;
         height: 30px;
     
@@ -277,11 +281,12 @@ th {
 
 @media (max-width: 575.98px) { 
     th {
-        font-size: 16px;
+        font-size: 15px;
     }
     td {
-        font-size: 13px;
+        font-size: 12px;
     }
+
 }
 
 table {

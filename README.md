@@ -31,6 +31,7 @@ I wanted to keep the design simple but ellegant. I did not want any styling to t
 - Global cryptocurrency metric bar
 - Search page function
 - Table containing most relevant information on top 1000 Cryptocurrencies
+- Ability to be able to sort by 24H Percent Change
 - Bootstrap Modal containing coin data when name clicked
 - Integrated Google Maps API showing Crypto Penguin location
 - Contact form using EmailJS
@@ -62,9 +63,57 @@ I used [Github](https://github.com/) to host my repository and [Visual Studio Co
 ## Code Resources
 
 # Testing
-## Basic Testing
-- [WC3 HTML Validator](https://validator.w3.org/) - Used to test HTML code
-- [WC3 CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to test CSS code
+## Code Validation
+- [WC3 HTML Validator](https://validator.w3.org/) - Used to test HTML code - Pass
+- [WC3 CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to test CSS code - Pass
+- [JS Hint](https://jshint.com/) - Used to test JavaScript - Pass
+
+## Functionality
+### Nav Bar
+- The nav bar works as intended across all devices. The collapsable menu works and looks as intended.
+- Tested to ensure logo inage returned to home page
+- Test to ensure links brought user to correct page
+
+### Search Bar
+- I tested the search bar on multiple pages, searching for cryptocurrencies by name. The search bar is intended to only search names within the 100 displayed on a given page and it performs this correctly.
+
+### Sorting by 24H Percent Change and Rank
+- I have tested both sorting columns across all pages
+  - Page loads ordered by 'Rank' in descending order
+  - Click '24H Change' table head to order descending
+  - Click '24H Change' to rearrange to ascending
+  - Click 'Rank' to reorder by this column.
+  - Click 'Rank' again to sort descendingly by Rank
+
+### Modal 
+- Opened modal across all devices. Checked information displaying in modals corresponded with data on table.
+- Checked both oreintations across mobile devices to ensure modal as sized and fitted properly
+
+### Page Navigation
+- Tested navigation links on all pages. Tested to make sure 'Prev' button did not appear on first page and 'Next' did not apprear when page 10 reached
+
+### Footer Link to API
+- The link in the footer is working correctly and opening in a seperate tab
+
+### Google Maps API
+- Checked to ensure opened in correct location 
+- Tested interactivity on map
+- Tested marker information window - information displaying correctly
+
+### Contact Form
+- Tested name field ensuring it is required
+- Tested email field to ensure it is required and requires email format
+- Tested text area to ensure it is required.
+- Tested emailJS - Working correctly and emails aerriving correctly formatted into my email address.
+- Alert working correctly when submission successful
+- Alert working successfully when submission fails 
+
+## Responsiveness
+### 
+
+
+
+
 - Tested on multiple browsers (Chrome, Safari, Edge)
 - Tested on multiple devices (iPhone 11, 8, Galaxy S8)
 - Tested all nav items when collapsed and not
