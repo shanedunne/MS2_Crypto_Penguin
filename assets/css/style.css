@@ -190,6 +190,8 @@ body {
     margin-left: 225px;
     margin-right: 0px; 
     margin-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
     background-color: #212529;
     border: 1px solid #8a8a8a;
     border-radius: 2px;
@@ -438,6 +440,9 @@ input , textarea {
     display: block;
     margin: auto;
     font-family: 'Roboto', sans-serif;
+    padding-left: 6px;
+    padding-right: 6px;
+
 }
 
 input {
