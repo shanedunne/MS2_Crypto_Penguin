@@ -11,8 +11,7 @@
 - get % change color working on modal
 ### NEXT / PREV
 - Set up prev to hide when page = 1
-- Next to stop at page 25
-- further style these buttons
+
 ### cursor
 
 ## Contact Page
