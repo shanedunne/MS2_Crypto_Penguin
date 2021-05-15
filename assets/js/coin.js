@@ -7,15 +7,15 @@ function nextPage() {
     changePage(page);
     getData();
   }
-};
+}
 
 function prevPage() {
   if (page > 1) {
     page--;
-    changePage(page)
+    changePage(page);
     getData();
   }
-};
+}
 
 function changePage(page) {
   var prevPageSelector = document.getElementById('prevPageSelector');
@@ -49,11 +49,11 @@ async function getGlobalData() {
   const globalData = await response.json();
 
 
-  var totalMarketCap = globalData.data.total_market_cap.usd
+  var totalMarketCap = globalData.data.total_market_cap.usd;
   var totalVolume = globalData.data.total_volume.usd;
   var totalCoins = globalData.data.active_cryptocurrencies;
-  var ethDominance = globalData.data.market_cap_percentage.eth
-  var btcDominance = globalData.data.market_cap_percentage.btc
+  var ethDominance = globalData.data.market_cap_percentage.eth;
+  var btcDominance = globalData.data.market_cap_percentage.btc;
 
 
 
@@ -66,7 +66,7 @@ async function getGlobalData() {
   document.getElementById('ethDominance').innerText = ethDominance.toFixed(2);
 
 
-};
+}
 
 
 
@@ -111,7 +111,7 @@ async function getData() {
               <td class='coin-volume'>${formatter.format(coins.total_volume).replace('.00', "")}</td>
               <td class='coin-market-cap'>${formatter.format(coins.market_cap).replace('.00', "")}</td>
             </tr>`;
-      coinData += rowHTML
+      coinData += rowHTML;
     }
 
     coinData += `
@@ -136,7 +136,7 @@ async function getData() {
     document.getElementById("modal-market-cap").innerHTML = $(this).next().next().next().next().next().html();
     document.getElementById("modal-image").src = $(this).prev().children().attr('src');
 
-    $("#myModal").modal('show')
+    $("#myModal").modal('show');
   }
 
   // change colour of 24h % change column based on positive or negative number
@@ -145,7 +145,7 @@ async function getData() {
       element.style.color = '#00CC00';
     } else {
       if (value < 0) {
-        element.style.color = '#FF8F8F'
+        element.style.color = '#FF8F8F';
       }
     }
   }
@@ -154,12 +154,12 @@ async function getData() {
   let coinNameModal = document.getElementsByClassName('coin-name');
   for (let i = 0; i < coinNameModal.length; i++) {
     coinNameModal[i].addEventListener('click', showModal);
-    changePercentColor(data[i].price_change_percentage_24h, percentColor[i])
+    changePercentColor(data[i].price_change_percentage_24h, percentColor[i]);
 
   }
 
 
-};
+}
 
 
 
@@ -266,4 +266,4 @@ window.addEventListener('load', () => {
   getData();
   changePage(1);
 
-})
+});
