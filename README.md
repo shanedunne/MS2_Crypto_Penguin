@@ -3,6 +3,17 @@ Crypto penguin is a cryptocurrency information site where users can get up to da
 
 
 ![](/assets/images/multi-device-image)
+## Table of Contents
+- [User Stories](#user-stories)
+- [User Experience](#user-experience)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Resources](#resources)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Acknowledgments](#Acknowledgments)
+
+
 
 
 ## User Stories
@@ -73,6 +84,8 @@ I used [Github](https://github.com/) to host my repository and [Visual Studio Co
 - [WC3 HTML Validator](https://validator.w3.org/) - Used to test HTML code - Pass
 - [WC3 CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to test CSS code - Pass
 - [JS Hint](https://jshint.com/) - Used to test JavaScript - Pass
+
+# Testing
 
 ## Functionality
 ### Nav Bar
