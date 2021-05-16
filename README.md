@@ -1,4 +1,7 @@
 # Crypto Penguin
+Crypto penguin is a cryptocurrency information site where users can get up to date on important metrics of the top 1000 cryptocurrencies in the world
+
+
 ![](/assets/images/multi-device-image)
 
 
@@ -14,20 +17,20 @@ Sarah is an alt coin trader. Since alt coins enjoy a rally when Bitcoin dominanc
 
 ## User Experience
 ## 1. Strategy
-Customer Goals: To be able to provide acurate and detaied statistics on the top 1000 cryptocurrencies in the world.
+Customer Goals: To be able to provide acurate and detaied statistics on the top 1000 cryptocurrencies in the world along with industry statistics.
 
-Personal Goals: To create a project about something i have a passion in, learn to integrate APIs and improve my javascript knowledge with my first JS project
+Personal Goals: To create a project about something i have a passion for, learn to integrate APIs and improve my javascript knowledge with my first JS project
 
 ## 2. Scope
 I aimed to keep the data provided to the user simple but sufficient in giving a clear image of the top 1000 cryptocurrencies. I have included some global metrics on the industry as a whole along with the main data points required to understand the performace of any of the top 1000 crypto assets
 
 ## 3. Structure
-The site contains a simple navigation bar between the home page and the contact us page. Following this, the first set of data displayed is the global metrics. This data is intentionally displayed at the top of the home page as it is good to get an understanding of the global market cap, volume and dominance ratings before diving into individual assets. Following this, all data is formatted identically in a table. i have set up a modal to open upon clicking of any asset name. This modal wass designed particularly for smaller screen sizes, saw all data is accessable even when the table cannot display it all.
+The site contains a simple navigation bar between the home page and the contact us page. Following this, the first set of data displayed is the global metrics. This data is intentionally displayed at the top of the home page as it is good to get an understanding of the global market cap, volume and dominance ratings before diving into individual assets. Following this, all data is formatted identically in a table. I have set up a modal to open upon clicking of any asset name. This modal wass designed particularly for smaller screen sizes, so all data is accessable even when the table cannot display it all.
 
 ## 4. Skeleton
 [Wireframes](/assets/wireframes/wireframes.pdf)
 ## 5. Surface 
-I wanted to keep the design simple but ellegant. I did not want any styling to take away from the content displayed on the page, only to enhance it. I went for a dark background (#212529) with a simple font (Roberto) and the majority of the font in (#fafafa) to allow the data to pop. i wanted to make the cryptocurrency symbol stand out so i went for a color and font combination of (#f59c27 & Zen Dots). Zen Dots looks somewhat futuristic. This combined with the chosen shade of orange adds decoration down the middle of the page
+I wanted to keep the design simple but elegant. I did not want any styling to take away from the content displayed on the page, only to enhance it. I went for a dark background (#212529) with a simple font (Roberto) and the majority of the font in (#fafafa) to allow the data to pop. i wanted to make the cryptocurrency symbol stand out so i went for a color and font combination of (#f59c27 & Zen Dots). Zen Dots looks somewhat futuristic. This combined with the chosen shade of orange adds decoration down the middle of the page
 # Features
 ## Deployed Features
 - Collapsable Bootstrap navbar
@@ -50,7 +53,7 @@ I wanted to keep the design simple but ellegant. I did not want any styling to t
 - [EmailJS](https://www.emailjs.com/docs/) - Contact form integration
 
 ## Workspace
-I used [Github](https://github.com/) to host my repository and [Visual Studio Code](https://code.visualstudio.com/) to write my Code
+I used [Github](https://github.com/) to host my repository and [Visual Studio Code](https://code.visualstudio.com/) to write my code
 
 ## Integration/Frameworks
 - [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) - used for carousels, navbar etc
@@ -65,7 +68,7 @@ I used [Github](https://github.com/) to host my repository and [Visual Studio Co
 
 ## Code Resources
 
-# Testing
+- [W3Schools](https://www.w3schools.com/js/default.asp) - Provided some basic JavaScript code which i was able to manipulate to work for my site - Particularly helpful with the search and sort functions.
 ## Code Validation
 - [WC3 HTML Validator](https://validator.w3.org/) - Used to test HTML code - Pass
 - [WC3 CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to test CSS code - Pass
@@ -107,15 +110,15 @@ I used [Github](https://github.com/) to host my repository and [Visual Studio Co
 - Tested name field ensuring it is required
 - Tested email field to ensure it is required and requires email format
 - Tested text area to ensure it is required.
-- Tested emailJS - Working correctly and emails aerriving correctly formatted into my email address.
+- Tested emailJS - Working correctly and emails arriving correctly formatted into my email address.
 - Alert working correctly when submission successful
-- Alert working successfully when submission fails 
+- Alert working correctly when submission fails 
 
 ## Responsiveness
 Responsiveness was checked using [Responsinator](https://www.responsinator.com/) while also designed with responsiveness in mind with regular testing on Dev Tools. The responsiveness has been tested across multiple devices such as iPhone 8, iPhone 8 Plus, iPhone X, Samusing Galaxy X5, iPad etc.
 
 ## Usability 
-Prior to submission, I deployed the site to GitHub pages in order to be able to share a link to the site with some friends who are also passionate about Cryptocurrency. All of the feedback was very positive, each friend found it easy to use and useful in day to day life
+Prior to submission, I deployed the site to GitHub Pages in order to be able to share a link to the site with some friends who are also interested in Cryptocurrency. All of the feedback was very positive, each friend found it easy to use and useful in day to day life
 
 ## Performace
 I used the Chrome Dev Tools Lighthouse feature to check the sites performance on both mobile and desktop versions. The site performed extremely well with results displayed below
@@ -131,7 +134,7 @@ I used the Chrome Dev Tools Lighthouse feature to check the sites performance on
 - I tested the website on an iPhone 11, iPhone 8 and Galaxy 8 and all featues looked and worked as expected
 
 ## Bugs Throughout Development
-- I ran into an issue what caused a concole log error some times i clicked the 'Next' button to navigate to the next page. Using Google Chrome Dev Tools Debugger, I was able to determine that the issue lay in the following line 
+- I ran into an issue that caused a concole log error some times i clicked the 'Next' button to navigate to the next page. Using Google Chrome Dev Tools Debugger, I was able to determine that the issue lay in the following line 
 ```js 
               <td class='coin-percent'>${coins.price_change_percentage_24h.toFixed(2) + '%'}</td>
 
@@ -151,6 +154,7 @@ I used the Chrome Dev Tools Lighthouse feature to check the sites performance on
 
 
 # Acknowledgments
+- Thanks to [Coin Gecko](https://www.coingecko.com/en/api) for use of the API
 - Thanks to the Code Institute whos tuition has brought my skills to a level to be able to achieve this. The tutor support have been very helpful and patient
 - A big thanks to my great mentor Excellence Ilesanmi for helping and guiding me along the way
 

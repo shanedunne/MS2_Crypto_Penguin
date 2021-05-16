@@ -48,9 +48,9 @@ function sendMail(contactForm) {
       },
       function (error) {
         console.log("ERROR SENDING", error);
-        alert('Sorry an arror has occured. Please try again later')
+        alert('Sorry an arror has occured. Please try again later');
       }
-    )
+    );
   return false;
 }
 
